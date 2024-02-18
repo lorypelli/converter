@@ -9,9 +9,15 @@ func main() {
 	var b, d int
 	fmt.Print("Provide a number ")
 	_, err := fmt.Scan(&n)
-	for err != nil {
+	if n < 0 {
+		fmt.Println("Don't use negative numbers, make it simple")
+	}
+	for n < 0 || err != nil {
 		fmt.Print("Provide a number ")
 		_, err = fmt.Scan(&n)
+		if n < 0 {
+			fmt.Println("Don't use negative numbers, make it simple")
+		}
 	}
 	fmt.Print("Provide a base ")
 	fmt.Scan(&b)
@@ -31,5 +37,5 @@ func main() {
 		fmt.Println("Using default...")
 		d = 6
 	}
-	fmt.Printf("Il numero %.*f in base %d è %s", d, n, b, GetBase(b, n))
+	fmt.Printf("Il numero %.*f in base %d è %s", d, n, b, GetBase(b, n, d))
 }
