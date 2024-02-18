@@ -5,7 +5,8 @@ import (
 )
 
 func main() {
-	var n, b, d int
+	var n float64
+	var b, d int
 	fmt.Print("Provide a number ")
 	_, err := fmt.Scan(&n)
 	for err != nil {
@@ -30,5 +31,5 @@ func main() {
 		fmt.Println("Using default...")
 		d = 6
 	}
-	fmt.Printf("Il numero %d in base %d è %s", n, b, GetBase(b, n))
+	fmt.Printf("Il numero %.*f in base %d è %s", d, n, b, GetBase(b, n))
 }

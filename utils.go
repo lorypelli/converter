@@ -10,7 +10,7 @@ func Reverse(s *string) {
 	*s = string(runes)
 }
 
-func GetBase(b, n int) string {
+func GetBase(b int, n float64) string {
 	switch b {
 	case 2: {
 		return ToBinary(n)

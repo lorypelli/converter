@@ -4,9 +4,9 @@ import (
 	"fmt"
 )
 
-func ToOctal(n int) string {
+func ToOctal(n float64) string {
 	var s string
-	for i := n; i > 0; i /= 8 {
+	for i := int(n); i > 0; i /= 8 {
 		s += fmt.Sprint(i % 8)
 	}
 	Reverse(&s)
