@@ -37,5 +37,5 @@ func main() {
 		fmt.Println("Using default...")
 		d = 6
 	}
-	fmt.Printf("Il numero %.*f in base %d è %s", d, n, b, GetBase(b, n, d))
+	fmt.Printf("The number %.*f in base %d is %s", d, n, b, GetBase(b, n, d))
 }
