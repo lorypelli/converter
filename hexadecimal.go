@@ -22,6 +22,10 @@ func ToHex(n float64, d int) string {
 		}
 		i++
 	}
-	Reverse(&strings.Split(s, ".")[0])
-	return strings.Split(s, ".")[0] + "." + strings.Split(s, ".")[1]
+	integerPart := strings.Split(s, ".")[0]
+	Reverse(&integerPart)
+	if d > 0 {
+		return integerPart + "." + strings.Split(s, ".")[1]
+	}
+	return integerPart
 }
