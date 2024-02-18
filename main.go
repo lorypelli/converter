@@ -30,7 +30,5 @@ func main() {
 		fmt.Println("Using default...")
 		d = 6
 	}
-	s := ToBinary(n)
-	Reverse(&s)
-	fmt.Println(s)
+	fmt.Printf("Il numero %d in base %d è %s", n, b, GetBase(b, n))
 }

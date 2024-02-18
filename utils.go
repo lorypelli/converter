@@ -9,3 +9,18 @@ func Reverse(s *string) {
 	}
 	*s = string(runes)
 }
+
+func GetBase(b, n int) string {
+	switch b {
+	case 2: {
+		return ToBinary(n)
+	}
+	case 8: {
+		return ToOctal(n)
+	}
+	case 16: {
+		return ToHex(n)
+	}
+	}
+	return ""
+}

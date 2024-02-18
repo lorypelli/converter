@@ -9,5 +9,6 @@ func ToBinary(n int) string {
 	for i := n; i > 0; i /= 2 {
 		s += fmt.Sprint(i % 2)
 	}
+	Reverse(&s)
 	return s
 }
